@@ -19,10 +19,12 @@ info(`Repo: ${repoName}`);
 const ref = context.ref;
 
 const getBranch = () => {
+  info("The ref:", ref)
   if (ref.startsWith("refs/heads/")) {
     return ref.substring(11);
   }
   if (ref.startsWith("refs/pull/")) {
+    info("Starts with refs/pull/!")
     return ref.replace("merge", "head");
   }
   return ref;
