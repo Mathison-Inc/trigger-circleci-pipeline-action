@@ -13,9 +13,9 @@ startGroup("Preparing CircleCI Pipeline Trigger");
 const payload = context.payload;
 const pattern = /github\.com\/(repos\/)?(.*)\/(.*)$/gm;
 const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
-info(`URL: ${payload.repository.url}`);
-info(`Org: ${repoOrg}`);
-info(`Repo: ${repoName}`);
+info(`URL 2: ${payload.repository.url}`);
+info(`Org 2: ${repoOrg}`);
+info(`Repo 2: ${repoName}`);
 const ref = context.ref;
 
 const getBranch = () => {
